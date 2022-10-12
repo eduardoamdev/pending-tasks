@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "knexInit": "cd db && knex init",
-    "knexCreateMigrationFile": "knex migrate:make init --migrations-directory db/migrations",
-    "knexMigrate": "knex migrate:latest --knexfile db/knexfile.js"
+    "dev": "nodemon src/app.js",
+    "knexInit": "cd src/configs/db && knex init",
+    "knexCreateMigrationFile": "knex migrate:make init --migrations-directory src/configs/db/migrations",
+    "knexMigrate": "knex migrate:latest --knexfile src/configs/db/knexfile.js"
   },
   "keywords": [],
   "author": "",
