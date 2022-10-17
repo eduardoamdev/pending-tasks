@@ -7,7 +7,8 @@
     "dev": "nodemon src/app.js",
     "knexInit": "cd src/configs/db && knex init",
     "knexCreateMigrationFile": "knex migrate:make init --migrations-directory src/configs/db/migrations",
-    "knexMigrate": "knex migrate:latest --knexfile src/configs/db/knexfile.js"
+    "knexMigrate": "knex migrate:latest --knexfile src/configs/db/knexfile.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "knex": "^2.3.0",
     "nodemon": "^2.0.20",
     "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "jest": "^29.2.0"
   }
 }
