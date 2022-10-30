@@ -38,7 +38,7 @@ En esta query, pediremos todos los registros y campos de nuestra tabla tasks.
 
 Knex query:
 
-http://localhost:3000/getTasks
+http://localhost:3000/tasks
 
 ```js
 const dbResponse = await db("tasks").select("id", "title", "content");
@@ -56,7 +56,7 @@ En esta segunda query pediremos un registro con todos sus campos.
 
 Knex query:
 
-http://localhost:3000/getTask/0
+http://localhost:3000/tasks
 
 ```js
 const dbResponse = await db("tasks")
@@ -74,7 +74,7 @@ Si sólo quisiéramos dos campos (por ejemplo id y title) los pediríamos de la 
 
 Knex query:
 
-http://localhost:3000/getTask/0
+http://localhost:3000/tasks/task/0
 
 ```js
 const dbResponse = await db("tasks")
@@ -92,11 +92,10 @@ select id, title from tasks where id = 0
 
 Knex query:
 
-http://localhost:3000/createTask
+http://localhost:3000/tasks/create
 
 ```json
 {
-  "id": 5,
   "title": "Second test",
   "content": "Test task"
 }
@@ -116,11 +115,10 @@ insert into tasks (id, title, content) values (7, 'Another task', 'This is anoth
 
 Knex query:
 
-http://localhost:3000/updateTask/2
+http://localhost:3000/tasks/update/2
 
 ```json
 {
-  "id": 2,
   "title": "Second",
   "content": "Task"
 }
@@ -140,7 +138,7 @@ update tasks set content = 'Task' where id = 2
 
 Knex query:
 
-http://localhost:3000/deleteTask/5
+http://localhost:3000/tasks/delete/5
 
 ```js
 await db("tasks").where({ id: req.params.id }).del();

@@ -2,7 +2,7 @@ const db = require("../configs/db/db");
 
 const tasksService = async () => {
   try {
-    const dbResponse = await db("tasks").select("id", "title", "content");
+    const dbResponse = await db("tasks").select("id", "title");
 
     return { success: true, info: dbResponse };
   } catch (error) {

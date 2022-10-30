@@ -1,9 +1,9 @@
 const deleteTaskService = require("../services/deleteTask");
 
 const deleteTaskController = async (req, res) => {
-  const deleteTaskResponse = await deleteTaskService(req.params.id);
+  await deleteTaskService(req.params.id);
 
-  res.json(deleteTaskResponse);
+  res.redirect("/tasks");
 };
 
 module.exports = deleteTaskController;
