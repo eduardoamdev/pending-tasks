@@ -22,7 +22,7 @@ Para preparar nuestra base datos seguiremos los siguientes pasos:
 
 ### Arrancar el servidor:
 
-Para arrancar nuestro servidor de Express ejecutaremos el comando < npm run dev >. Desde este momento, ya podemos empezar a hacer peticione a los diferentes end points desde cualquier cliente web.
+Para arrancar nuestro servidor de Express ejecutaremos el comando < npm run dev >. Desde este momento, ya podemos empezar a hacer peticione a los diferentes end points desde cualquier cliente web. Nosotros, en este caso hemos usado ejs para construir plantillas de manera que, una vez arrancado el proyecto podemos empezar a utilizarlo desde nuestro navegador en http://localhost:3000.
 
 ## Consultas a la base de datos desde la api:
 
@@ -115,7 +115,7 @@ insert into tasks (id, title, content) values (7, 'Another task', 'This is anoth
 
 Knex query:
 
-http://localhost:3000/tasks/update/2
+http://localhost:3000/tasks/update/2/Second/Task
 
 ```json
 {

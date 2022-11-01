@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pending Tasks</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pending Tasks</title>
+  <link href="/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <%- include("./partials/navbar.ejs") %>
-    <a href="/tasks/deleteConfirmation/<%= taskResponse.info[0].id %>">Delete</a>
-    <p><%= taskResponse.info[0].title %></p>
-    <p><%= taskResponse.info[0].content %></p>
+	<%- include("./partials/navbar.ejs") %>
+  <div class="flex-center-column task-detail mb-5">
+    <h2 class="little-title">Task</h2>
+    <div class="task-buttons">
+      <a href="/tasks/updatingForm/<%= taskResponse.info[0].id %>/<%= taskResponse.info[0].title %>/<%= taskResponse.info[0].content %>" class="normal-text">Update</a>
+      <a href="/tasks/deleteConfirmation/<%= taskResponse.info[0].id %>" class="normal-text color-red">Delete</a>
+    </div>
+    <div class="task-info">
+      <div class="mb-1-5">
+        <p class="mb-1 normal-text">Title:</p>
+        <p class="normal-text"><%= taskResponse.info[0].title %></p>
+      </div>
+      <div>
+        <p class="mb-1 normal-text">Content:</p>
+        <p class="normal-text"><%= taskResponse.info[0].content %></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.navbar {
+  background: green;
+  padding: 1.7rem 3rem;
+}
+
+.normal-text {
+  font-size: 1.2rem;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 2rem;
+}
+
+.flex-center-row {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 15rem;
+}
+
+.little-title {
+  font-size: 1.6rem;
+}
+
+.tasks-list {
+  margin-top: 7rem;
+}
+
+.task-detail {
+  margin-top: 7rem;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 25rem;
+  margin-top: 3rem;
+}
+
+.task-info {
+  width: 25rem;
+  margin-top: 3rem;
+}
+
+table {
+  margin-top: 3rem;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-1-5 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.form-container {
+  margin-top: 5rem;
+}
+
+.form {
+  margin-top: 3rem;
+}
+
+.input {
+  padding: 0.5rem;
+}
+
+.color-red {
+  color: red;
+}

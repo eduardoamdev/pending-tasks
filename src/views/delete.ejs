@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pending Tasks</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pending Tasks</title>
+  <link href="/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <%- include("./partials/navbar.ejs") %>
-
-    Delete <span><%= response.info[0].title %></span>?
-
-    <a href="/tasks/delete/<%= response.info[0].id %>">Yes</a>
-
-    <a href="/tasks/task/<%= response.info[0].id %>">No</a>
+  <%- include("./partials/navbar.ejs") %>
+  <div class="flex-center-column task-detail mb-5">
+    <h2 class="little-title">Delete <%= response.info[0].title %>?</h2>
+    <div class="task-buttons">
+      <a href="/tasks/delete/<%= response.info[0].id %>" class="normal-text color-red">Yes</a>
+      <a href="/tasks/task/<%= response.info[0].id %>" class="normal-text">No</a>
+    </div>
+  </div>
 </body>
 </html>

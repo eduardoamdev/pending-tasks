@@ -5,9 +5,9 @@ const creationFormController = async (req, res) => {
 };
 
 const createTaskController = async (req, res) => {
-  const createTaskResponse = await createTaskService(req.body);
+  await createTaskService(req.body);
 
-  res.json(createTaskResponse);
+  res.redirect("/tasks");
 };
 
 module.exports = { createTaskController, creationFormController };

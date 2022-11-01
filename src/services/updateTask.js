@@ -6,7 +6,7 @@ const updateTaskService = async (id, info) => {
 
     return {
       success: true,
-      info: `Task with id ${id} has been updated succesfully`,
+      info: id,
     };
   } catch (error) {
     console.log(error);

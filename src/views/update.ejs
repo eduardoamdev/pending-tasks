@@ -10,16 +10,17 @@
 <body>
   <%- include("./partials/navbar.ejs") %>
   <div class="flex-center-column form-container mb-5">
-    <h2 class="little-title">Create task</h2>
-    <form action="/tasks/create" method="post" class="flex-center-column form">
+    <h2 class="little-title">Update task</h2>
+    <form action="/tasks/update/<%= task.id %>" method="post" class="flex-center-column form">
       <label for="title" class="mb-1 normal-text">Title</label>
       <input
         id="title"
         type="text"
         name="title"
         class="mb-1-5 normal-text input"
+        value="<%= task.title %>"
       />
-      <label for="content" class="mb-1 normal-text">Content</label>
+      <label for="content" class="mb-1 normal-text">Title</label>
       <textarea
         id="content"
         type="text"
@@ -27,7 +28,7 @@
         rows="10"
         cols="30"
         class="mb-1-5 normal-text input"
-      ></textarea>
+      ><%= task.content %></textarea>
       <input type=submit value="Submit" class="normal-text" />
     </form>
   </div>

@@ -6,7 +6,10 @@ const {
   createTaskController,
   creationFormController,
 } = require("../controllers/createTask");
-const updateTaskController = require("../controllers/updateTask");
+const {
+  updateTaskController,
+  updatingFormController,
+} = require("../controllers/updateTask");
 const {
   deleteTaskController,
   deleteConfirmationController,
@@ -22,7 +25,9 @@ router.get("/creationForm", creationFormController);
 
 router.post("/create", createTaskController);
 
-router.put("/update/:id", updateTaskController);
+router.get("/updatingForm/:id/:title/:content", updatingFormController);
+
+router.post("/update/:id", updateTaskController);
 
 router.get("/deleteConfirmation/:id", deleteConfirmationController);
 
