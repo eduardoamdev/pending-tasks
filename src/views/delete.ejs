@@ -8,6 +8,11 @@
 </head>
 <body>
     <%- include("./partials/navbar.ejs") %>
-    <h1>Welcome to Pending Tasks</h1>
+
+    Delete <span><%= response.info[0].title %></span>?
+
+    <a href="/tasks/delete/<%= response.info[0].id %>">Yes</a>
+
+    <a href="/tasks/task/<%= response.info[0].id %>">No</a>
 </body>
 </html>

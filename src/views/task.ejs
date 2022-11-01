@@ -7,7 +7,8 @@
     <title>Pending Tasks</title>
 </head>
 <body>
-    <a href="/tasks/delete/<%= taskResponse.info[0].id %>">Delete</a>
+    <%- include("./partials/navbar.ejs") %>
+    <a href="/tasks/deleteConfirmation/<%= taskResponse.info[0].id %>">Delete</a>
     <p><%= taskResponse.info[0].title %></p>
     <p><%= taskResponse.info[0].content %></p>
 </body>

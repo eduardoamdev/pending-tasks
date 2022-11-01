@@ -7,7 +7,10 @@ const {
   creationFormController,
 } = require("../controllers/createTask");
 const updateTaskController = require("../controllers/updateTask");
-const deleteTaskController = require("../controllers/deleteTask");
+const {
+  deleteTaskController,
+  deleteConfirmationController,
+} = require("../controllers/deleteTask");
 
 const router = express.Router();
 
@@ -20,6 +23,8 @@ router.get("/creationForm", creationFormController);
 router.post("/create", createTaskController);
 
 router.put("/update/:id", updateTaskController);
+
+router.get("/deleteConfirmation/:id", deleteConfirmationController);
 
 router.get("/delete/:id", deleteTaskController);
 
