@@ -6,6 +6,7 @@ exports.up = function (knex) {
   return knex.schema.createTable("tasks", (task) => {
     task.increments("id");
     task.string("title");
+    task.string("type");
     task.string("content");
   });
 };

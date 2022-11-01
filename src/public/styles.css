@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-size: 10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 a {
@@ -83,8 +83,8 @@ td {
   margin-bottom: 2.5rem;
 }
 
-.mb-5 {
-  margin-bottom: 5rem;
+.mb-8 {
+  margin-bottom: 8rem;
 }
 
 .form-container {

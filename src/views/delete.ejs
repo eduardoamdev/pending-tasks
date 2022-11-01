@@ -9,7 +9,7 @@
 </head>
 <body>
   <%- include("./partials/navbar.ejs") %>
-  <div class="flex-center-column task-detail mb-5">
+  <div class="flex-center-column task-detail mb-8">
     <h2 class="little-title">Delete <%= response.info[0].title %>?</h2>
     <div class="task-buttons">
       <a href="/tasks/delete/<%= response.info[0].id %>" class="normal-text color-red">Yes</a>

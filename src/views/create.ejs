@@ -9,7 +9,7 @@
 </head>
 <body>
   <%- include("./partials/navbar.ejs") %>
-  <div class="flex-center-column form-container mb-5">
+  <div class="flex-center-column form-container mb-8">
     <h2 class="little-title">Create task</h2>
     <form action="/tasks/create" method="post" class="flex-center-column form">
       <label for="title" class="mb-1 normal-text">Title</label>
@@ -19,6 +19,12 @@
         name="title"
         class="mb-1-5 normal-text input"
       />
+      <label for="type" class="mb-1 normal-text">Type</label>
+      <select id="title" name="type" class="mb-1-5 normal-text input">
+        <option value="Work"><span class="normal-text">Work</span></option>
+        <option value="Money"><span class="normal-text">Money</span></option>
+        <option value="Others"><span class="normal-text">Others</span></option>
+      </select>
       <label for="content" class="mb-1 normal-text">Content</label>
       <textarea
         id="content"

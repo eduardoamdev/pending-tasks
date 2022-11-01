@@ -3,7 +3,7 @@ const db = require("../configs/db/db");
 const taskService = async (id) => {
   try {
     const dbResponse = await db("tasks")
-      .select("id", "title", "content")
+      .select("id", "title", "type", "content")
       .where({ id });
 
     return { success: true, info: dbResponse };
