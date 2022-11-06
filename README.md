@@ -41,7 +41,7 @@ Knex query:
 http://localhost:3000/tasks
 
 ```js
-const dbResponse = await db("tasks").select("id", "title", "content");
+const dbResponse = await db("tasks").select("id", "title", "type", "content");
 ```
 
 Raw query:
@@ -60,7 +60,7 @@ http://localhost:3000/tasks
 
 ```js
 const dbResponse = await db("tasks")
-  .select("id", "title", "content")
+  .select("id", "title", "type", "content")
   .where({ id: req.params.id });
 ```
 
@@ -108,7 +108,7 @@ const dbResponse = await db("tasks").insert(req.body).returning("id");
 Raw query:
 
 ```sql
-insert into tasks (id, title, content) values (7, 'Another task', 'This is another task')
+insert into tasks (title, type, content) values ('Another task', 'Work', 'This is another task')
 ```
 
 ### Actualizar una task en nuestra tabla:
